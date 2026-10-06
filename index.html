@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berlin, CT — A Community Guide to Berlin, Connecticut</title>
+<meta name="description" content="A community guide to Berlin, Connecticut — the town's history, parks and trails, local businesses, town services, news, and how to get in touch.">
+<link rel="canonical" href="https://springteasers.github.io/berlin-community/index.html">
+<meta name="theme-color" content="#122E3F">
+
+<!-- Open Graph / social. One card reused site-wide, per design/ia.md §5. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Berlin, Connecticut — Community Guide">
+<meta property="og:title" content="Berlin, CT — A Community Guide to Berlin, Connecticut">
+<meta property="og:description" content="A community guide to Berlin, Connecticut — history, parks and trails, local businesses, town services, news, and how to get in touch.">
+<meta property="og:url" content="https://springteasers.github.io/berlin-community/">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- C3 — skip link: first focusable element, targets #main-content -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ======================================================================
+     C1 — Header. Home only: transparent over the hero, solid at 100px scroll.
+     ====================================================================== -->
+<header class="header header--transparent" id="site-header">
+  <div class="container header__inner">
+    <!-- One accessible name for the whole lockup; the mark is decorative. -->
+    <a class="header__wordmark" href="index.html" aria-label="Berlin Community Site — home">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path fill="#C9A227" d="M50 92 C50 68, 50 44, 50 22 L46.5 22 C46.5 44, 46.5 68, 46.5 92 Z"/>
+        <path fill="currentColor" d="M14 88 C30 74, 42 50, 50 22 L46.4 22 C38.5 49.6, 27.1 72.4, 10.7 84.9 Z"/>
+        <path fill="currentColor" d="M86 88 C70 74, 58 50, 50 22 L53.6 22 C61.5 49.6, 72.9 72.4, 89.3 84.9 Z"/>
+      </svg>
+      <span class="wordmark">
+        <span class="wordmark__berlin">BERLIN</span>
+        <span class="wordmark__rule" aria-hidden="true"></span>
+        <span class="wordmark__ct">CONNECTICUT</span>
+      </span>
+    </a>
+
+    <!-- C1/C2 — nav. Six items; the brief's names, shortened per ia.md §3.1. -->
+    <nav class="header__nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="things-to-do.html">Things to Do</a></li>
+        <li><a class="nav__link" href="businesses.html">Businesses</a></li>
+        <li><a class="nav__link" href="services.html">Services</a></li>
+        <li><a class="nav__link" href="news.html">News &amp; Events</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__utility">
+      <!-- Town Hall's confirmed main number (research/services.md). -->
+      <a class="header__phone" href="tel:+18608287000">860.828.7000</a>
+      <a class="btn btn--primary btn--sm ext" href="https://www.berlinct.gov/"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Official town website (opens in a new tab)">Official town site</a>
+    </div>
+
+    <button class="header__toggle" type="button" id="drawer-toggle"
+            aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="header__toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- C2 — Mobile drawer. Plain DOM; degrades to visible links with no JS. -->
+<div class="drawer on-dark" id="mobile-drawer" data-open="false" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="drawer__head">
+    <span class="drawer__wordmark">
+      <span class="wordmark">
+        <span class="wordmark__berlin">BERLIN</span>
+        <span class="wordmark__rule" aria-hidden="true"></span>
+        <span class="wordmark__ct">CONNECTICUT</span>
+      </span>
+    </span>
+    <button class="drawer__close" type="button" id="drawer-close">
+      <span aria-hidden="true">&times;</span>
+      <span class="visually-hidden">Close menu</span>
+    </button>
+  </div>
+  <nav aria-label="Main (mobile)">
+    <ul class="drawer__list">
+      <li><a class="drawer__link" href="about.html">About Berlin</a></li>
+      <li><a class="drawer__link" href="things-to-do.html">Things to Do</a></li>
+      <li><a class="drawer__link" href="businesses.html">Local Businesses</a></li>
+      <li><a class="drawer__link" href="services.html">Town Services &amp; Links</a></li>
+      <li><a class="drawer__link" href="news.html">News &amp; Events</a></li>
+      <li><a class="drawer__link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="drawer__foot">
+    <a class="drawer__phone" href="tel:+18608287000">860.828.7000</a>
+    <a class="btn btn--primary ext" href="https://www.berlinct.gov/"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Official town website (opens in a new tab)">Official town site</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ====================================================================
+       C4 — Home hero. 55vh mobile / 65vh desktop. Photo is a CSS background
+       layer with --scrim-hero; the H1 is real text, never baked into an image.
+       C19: no licensed photo sourced yet, so the graded tint shows instead —
+       never a broken image.
+       ==================================================================== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <p class="eyebrow">Community guide</p>
+      <h1 class="hero__title" id="hero-title">Welcome to Berlin, Connecticut</h1>
+      <p class="hero__lede">
+        A plain-language guide to the town at the geographic center of Connecticut — where to
+        go, who to call, and where to confirm the details that matter.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="contact.html">Contact the town</a>
+        <a class="btn btn--secondary" href="things-to-do.html">Explore things to do</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro prose -->
+  <section class="section section--no-rule">
+    <div class="container">
+      <p class="section-intro">
+        Berlin is a working Connecticut town that measures itself by its center. Incorporated in
+        1785, it built its early identity on agriculture and industry — the tin trade and brick
+        manufacturing — and it still keeps residential neighborhoods and employers side by side.
+        This site gathers what a resident or a visitor needs into one place, and points to the
+        official town website for everything that changes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       At a glance — C11 stat cards (<dt>/<dd>). A source line is mandatory:
+       do not render a number without its origin.
+       ==================================================================== -->
+  <section class="section section--band" aria-labelledby="glance-title">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__rule" aria-hidden="true"></div>
+        <h2 id="glance-title">At a glance</h2>
+      </div>
+
+      <dl class="stat-strip">
+        <div class="stat">
+          <dt class="stat__label">Incorporated</dt>
+          <dd class="stat__value">1785</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__label">Population (2020 census)</dt>
+          <dd class="stat__value">20,175</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__label">Form of government</dt>
+          <dd class="stat__value stat__value--sm">Town Council&ndash;Town Manager</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__label">Position</dt>
+          <dd class="stat__value stat__value--sm">Geographic center of Connecticut</dd>
+        </div>
+      </dl>
+
+      <!-- Mandatory source line for every figure above. -->
+      <p class="source-line">
+        Sources: Town of Berlin and U.S. Census (2020), via Wikipedia &mdash;
+        <a href="https://en.wikipedia.org/wiki/Berlin,_Connecticut" target="_blank" rel="noopener noreferrer">Berlin, Connecticut (opens in a new tab)</a>.
+        Population reflects the 2020 census and will change; confirm the latest estimate on the
+        <a href="https://www.berlinct.gov/" target="_blank" rel="noopener noreferrer">official town website (opens in a new tab)</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       What you'll find here — 6 feature cards so a 3-column desktop grid
+       lands 3 + 3 with no orphan (wireframes Template A).
+       ==================================================================== -->
+  <section class="section" aria-labelledby="find-title">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__rule" aria-hidden="true"></div>
+        <h2 id="find-title">What you&rsquo;ll find here</h2>
+      </div>
+
+      <div class="grid grid--3">
+
+        <article class="card card--link">
+          <svg class="card__icon icon icon--lg" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-landmark"></use></svg>
+          <h3 class="card__title"><a href="about.html">About Berlin</a></h3>
+          <p class="card__text">The town&rsquo;s story, its key facts, and how it is governed.</p>
+          <span class="link-style">Read the town&rsquo;s story</span>
+        </article>
+
+        <article class="card card--link">
+          <svg class="card__icon icon icon--lg" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-tree"></use></svg>
+          <h3 class="card__title"><a href="things-to-do.html">Things to Do</a></h3>
+          <p class="card__text">Parks, the Mattabesett Trail, landmarks and the town&rsquo;s seasonal traditions.</p>
+          <span class="link-style">Parks, trails and events</span>
+        </article>
+
+        <article class="card card--link">
+          <svg class="card__icon icon icon--lg" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-store"></use></svg>
+          <h3 class="card__title"><a href="businesses.html">Local Businesses</a></h3>
+          <p class="card__text">A starting directory of restaurants, shops, breweries and local trades.</p>
+          <span class="link-style">Browse the directory</span>
+        </article>
+
+        <article class="card card--link">
+          <svg class="card__icon icon icon--lg" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-building"></use></svg>
+          <h3 class="card__title"><a href="services.html">Town Services &amp; Links</a></h3>
+          <p class="card__text">Town hall, departments, schools and the public library in one place.</p>
+          <span class="link-style">Town hall and departments</span>
+        </article>
+
+        <article class="card card--link">
+          <svg class="card__icon icon icon--lg" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-news"></use></svg>
+          <h3 class="card__title"><a href="news.html">News &amp; Events</a></h3>
+          <p class="card__text">What is happening around town, and the official sources to follow for dates.</p>
+          <span class="link-style">What&rsquo;s happening around town</span>
+        </article>
+
+        <article class="card card--link">
+          <svg class="card__icon icon icon--lg" aria-hidden="true" focusable="false"><use href="assets/img/icons.svg#i-phone"></use></svg>
+          <h3 class="card__title"><a href="contact.html">Contact</a></h3>
+          <p class="card__text">The one address and one phone number worth saving, plus the pages to go to next.</p>
+          <span class="link-style">Get in touch</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       For residents — quick links. The block a returning resident uses to
+       skip all visitor content. 4 columns desktop → stacked rows mobile.
+       ==================================================================== -->
+  <section class="section section--tint" aria-labelledby="residents-title">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__rule" aria-hidden="true"></div>
+        <h2 id="residents-title">For residents &mdash; quick links</h2>
+      </div>
+
+      <div class="route-list">
+        <a class="route-item" href="services.html">
+          <span class="route-item__label">Town Services &amp; Links</span>
+          <span class="visually-hidden">, opens the Town Services &amp; Links page</span>
+        </a>
+        <a class="route-item" href="tel:+18608287000">
+          <span class="route-item__label">
+            Town Hall
+            <span class="route-item__hint">860.828.7000</span>
+          </span>
+          <span class="visually-hidden">, call the main Town Hall number</span>
+        </a>
+        <a class="route-item" href="news.html">
+          <span class="route-item__label">News &amp; Events</span>
+          <span class="visually-hidden">, opens the News &amp; Events page</span>
+        </a>
+        <a class="route-item" href="contact.html">
+          <span class="route-item__label">Contact</span>
+          <span class="visually-hidden">, opens the Contact page</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- C17 — CTA band -->
+  <section class="cta-band on-dark" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Start with Town Hall</h2>
+      <p>
+        Almost every town service routes through one address and one phone number. That is the
+        fastest way to get an answer &mdash; and the official town website is where the details
+        that change are always current.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="contact.html">Contact the town</a>
+        <a class="btn btn--ghost ext" href="https://www.berlinct.gov/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Official town website (opens in a new tab)">Official town website</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================================================================
+     C18 — Footer. 4 → 2 → 1 columns, then the MANDATORY disclaimer strip,
+     then the legal row. Never removed, never condensed.
+     ====================================================================== -->
+<footer class="footer on-dark">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div>
+        <span class="footer__wordmark">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <path fill="#C9A227" d="M50 92 C50 68, 50 44, 50 22 L46.5 22 C46.5 44, 46.5 68, 46.5 92 Z"/>
+            <path fill="currentColor" d="M14 88 C30 74, 42 50, 50 22 L46.4 22 C38.5 49.6, 27.1 72.4, 10.7 84.9 Z"/>
+            <path fill="currentColor" d="M86 88 C70 74, 58 50, 50 22 L53.6 22 C61.5 49.6, 72.9 72.4, 89.3 84.9 Z"/>
+          </svg>
+          <span class="wordmark">
+            <span class="wordmark__berlin">BERLIN</span>
+            <span class="wordmark__rule" aria-hidden="true"></span>
+            <span class="wordmark__ct">CONNECTICUT</span>
+          </span>
+        </span>
+        <p class="footer__desc">
+          A community guide to Berlin, Connecticut &mdash; the town&rsquo;s history, places,
+          businesses and services, compiled from public sources.
+        </p>
+        <p class="footer__tagline">An independent community guide</p>
+      </div>
+
+      <nav aria-labelledby="footer-explore">
+        <h2 class="footer__heading" id="footer-explore">Explore</h2>
+        <ul class="footer__list">
+          <li><a href="about.html">About Berlin</a></li>
+          <li><a href="things-to-do.html">Things to Do</a></li>
+          <li><a href="businesses.html">Local Businesses</a></li>
+          <li><a href="services.html">Town Services &amp; Links</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer__heading">Town essentials</h2>
+        <ul class="footer__list">
+          <li><span>Berlin Town Hall<br>240 Kensington Road<br>Berlin, CT 06037</span></li>
+          <li><a class="footer__phone" href="tel:+18608287000">860.828.7000</a></li>
+          <li><a class="ext" href="http://www.berlinpeck.org/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Berlin-Peck Memorial Library (opens in a new tab)">Berlin-Peck Memorial Library</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__heading">Go official</h2>
+        <ul class="footer__list">
+          <li><a class="ext" href="https://www.berlinct.gov/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Official town website (opens in a new tab)">Official town website</a></li>
+          <li><a class="ext" href="http://www.berlinpeck.org/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Public library (opens in a new tab)">Public library</a></li>
+          <li><a class="ext" href="https://www.berlinct.gov/department/index.php?structureid=40" target="_blank" rel="noopener noreferrer"
+                 aria-label="Public schools (opens in a new tab)">Public schools</a></li>
+          <li><a class="ext" href="https://patch.com/connecticut/berlin" target="_blank" rel="noopener noreferrer"
+                 aria-label="Berlin, CT Patch — local news (opens in a new tab)">Berlin, CT Patch</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- MANDATORY disclaimer strip — word for word, above the legal row. -->
+    <div class="footer__disclaimer">
+      <p>
+        <strong>This is a community information site and is not an official website of the Town of
+        Berlin, Connecticut.</strong> Details are compiled from public sources; always confirm
+        current hours, phone numbers and services on the official town website.
+      </p>
+    </div>
+
+    <div class="footer__legal">
+      <p>&copy; <span id="footer-year">2026</span> &middot; Berlin, Connecticut &mdash; Community Guide</p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

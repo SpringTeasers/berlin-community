@@ -1,0 +1,5 @@
+# robots.txt — Berlin Community Site
+User-agent: *
+Allow: /
+
+Sitemap: https://springteasers.github.io/berlin-community/sitemap.xml

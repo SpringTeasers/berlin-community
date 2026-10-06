@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" width="160" height="96" role="img" aria-label="Berlin, Connecticut — Berlin Community Site">
+  <title>Berlin, Connecticut — Berlin Community Site</title>
+  <!-- logo-stacked.svg — mark centred above the wordmark (logo-spec §3).
+       Footer, mobile drawer head, print. Slate pair is currentColor. -->
+  <g transform="translate(60,0) scale(0.40)">
+    <path fill="currentColor" d="M14 88 C30 74, 42 50, 50 22 L46.4 22 C38.5 49.6, 27.1 72.4, 10.7 84.9 Z"/>
+    <path fill="currentColor" d="M86 88 C70 74, 58 50, 50 22 L53.6 22 C61.5 49.6, 72.9 72.4, 89.3 84.9 Z"/>
+    <path fill="#C9A227" d="M50 92 C50 68, 50 44, 50 22 L46.5 22 C46.5 44, 46.5 68, 46.5 92 Z"/>
+  </g>
+  <text x="80" y="62" text-anchor="middle" font-family="'Source Serif 4','Source Serif Pro',Georgia,'Times New Roman',serif" font-size="20" font-weight="600" letter-spacing="-0.2" fill="currentColor">BERLIN</text>
+  <rect x="38" y="68" width="84" height="2" fill="#C9A227"/>
+  <text x="80" y="84" text-anchor="middle" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="1.44" fill="currentColor" opacity="0.85">CONNECTICUT</text>
+</svg>

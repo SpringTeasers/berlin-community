@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Berlin Community Site">
+  <title>Berlin Community Site</title>
+  <!-- Small-size fairing (logo-spec §1.4): TWO strokes only below 24px.
+       Brass on a slate-900 ground is a contrast requirement (5.83:1), not a style choice. -->
+  <rect width="48" height="48" rx="8" fill="#122E3F"/>
+  <path fill="#C9A227" d="M15 38 C22 31.5, 25 25, 24.5 12 L20.5 12 C20.5 24.5, 17.5 31, 11 36.5 Z"/>
+  <path fill="#FBF8F2" d="M33 38 C26 31.5, 23 25, 23.5 12 L27.5 12 C27.5 24.5, 30.5 31, 37 36.5 Z"/>
+</svg>
